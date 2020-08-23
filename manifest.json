@@ -1,0 +1,23 @@
+{
+    "name": "Catify",
+    "version": "1.0",
+    "description": "Cats!",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "css": ["style.css"],
+          "js": ["contentScript.js"]
+        }
+      ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+      "web_accessible_resources": ["imgs/*.jfif"]
+  }
